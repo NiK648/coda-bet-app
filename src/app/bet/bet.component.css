@@ -1,0 +1,94 @@
+.bet-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f5f6;
+}
+
+.bet-container .top-row {
+  width: 100vw;
+  height: 33vh;
+}
+
+.bet-container .middle-row {
+  width: 100vw;
+  height: 34vh;
+}
+
+.bet-container .bottom-row {
+  width: 100vw;
+  height: 33vh;
+}
+
+.bet-container mat-grid-list {
+  height: 100%;
+}
+
+.avatar-image img {
+  width: 35px;
+  border-radius: 5px;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-card {
+  color: red;
+  width: 250px;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.example-card.winner {
+  color: green;
+  border: 1px solid green;
+}
+
+mat-card-footer {
+  position: relative;
+  top: 24px;
+  text-align: center;
+  width: 100px;
+  margin: 0px;
+  display: inline-block;
+  left: 28%;
+  background-color: red;
+  color: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+mat-card-footer::before {
+  content: 'Lose';
+}
+
+.winner mat-card-footer {
+  background-color: green;
+}
+
+.winner mat-card-footer::before {
+  content: 'Winner';
+}
+
+mat-card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 160px;
+}
+
+.bet-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.bet-card p {
+  margin: auto;
+  font-size: 48px;
+  color: green;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+.list-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.list-container mat-drawer {
+  width: 15vw;
+  border-right: none;
+  box-shadow: 1px 0px 2px 0px #cccccc;
+  background-color: #ebf0f2;
+}
+
+.list-container mat-drawer-content {
+  width: 85vw;
+  padding: 0px 10px;
+  background-color: #f1f5f6;
+}
+
+table.mat-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+  background-color: transparent;
+  table-layout: fixed;
+}
+
+th.mat-header-cell {
+  background-color: #ebf0f2;
+  border-bottom: none;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  padding-left: 24px;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type {
+  padding-left: 0px;
+  text-align: center;
+}
+
+.avatar {
+  width: 35px;
+  border-radius: 5px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.mat-paginator {
+  background-color: transparent;
+}
+
+.top-content {
+  height: 13vh;
+  padding: 10px;
+}
+
+.bottom-content {
+  height: 87vh;
+}
+
+.title {
+  color: #321ed9;
+  font-weight: 500;
+}
+
+.drawer-top-content {
+  height: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawer-top-content mat-icon {
+  font-size: 128px;
+  width: 128px;
+  height: 128px;
+}
+
+.drawer-bottom-content {
+  height: 76vh;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}

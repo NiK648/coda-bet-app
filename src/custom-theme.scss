@@ -1,0 +1,135 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+//$coda-app-primary: mat-palette($mat-indigo);
+//$coda-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+//$coda-app-warn: mat-palette($mat-red);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$coda-app-primary: (
+    50 : #e5e3fa,
+    100 : #beb8f3,
+    200 : #9389eb,
+    300 : #6859e3,
+    400 : #4736dd,
+    500 : #2712d7,
+    600 : #2310d3,
+    700 : #1d0dcd,
+    800 : #170ac7,
+    900 : #0e05be,
+    A100 : #e8e7ff,
+    A200 : #b6b4ff,
+    A400 : #8481ff,
+    A700 : #6b68ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$coda-app-accent: (
+    50 : #e0eae1,
+    100 : #b3cbb3,
+    200 : #80a981,
+    300 : #4d874f,
+    400 : #266d29,
+    500 : #005303,
+    600 : #004c03,
+    700 : #004202,
+    800 : #003902,
+    900 : #002901,
+    A100 : #63ff63,
+    A200 : #30ff30,
+    A400 : #00fc00,
+    A700 : #00e300,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$coda-app-warn: (
+    50 : #f5e0e0,
+    100 : #e6b3b3,
+    200 : #d58080,
+    300 : #c44d4d,
+    400 : #b72626,
+    500 : #aa0000,
+    600 : #a30000,
+    700 : #990000,
+    800 : #900000,
+    900 : #7f0000,
+    A100 : #ffadad,
+    A200 : #ff7a7a,
+    A400 : #ff4747,
+    A700 : #ff2d2d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$coda-app-theme: mat-light-theme((
+  color: (
+    primary: $coda-app-primary,
+    accent: $coda-app-accent,
+    warn: $coda-app-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($coda-app-theme);
+

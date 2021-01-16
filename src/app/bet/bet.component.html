@@ -1,0 +1,66 @@
+<div class="bet-container">
+
+    <div class="top-row">
+        <mat-grid-list cols="5" rowHeight="fit">
+            <mat-grid-tile *ngFor="let item of [0,1,2,3,4]">
+                <mat-card class="example-card" *ngIf="data[item]" [ngClass]="{'winner': data[item].Bet == winner}">
+                    <mat-card-header>
+                        <div mat-card-avatar class="avatar-image"><img src="{{data[item]['Profile Image']}}" />
+                        </div>
+                        <mat-card-title>{{data[item].Name}}</mat-card-title>
+                        <mat-card-subtitle>{{data[item].Level}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{data[item].Bet}}
+                        </p>
+                        <p>
+                            {{data[item].Price}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-footer></mat-card-footer>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div class="middle-row">
+        <mat-grid-list cols="1" rowHeight="fit">
+            <mat-grid-tile>
+                <mat-card class="bet-card">
+                    <mat-card-content>
+                        <p>
+                            <span style="display: flex; justify-content: center; margin-bottom: 10px;">{{winner}}</span>
+                            <button mat-raised-button color="primary" (click)="back()">Back</button>
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div class="bottom-row">
+        <mat-grid-list cols="4" rowHeight="fit">
+            <mat-grid-tile *ngFor="let item of [5,6,7,8]">
+                <mat-card class="example-card" *ngIf="data[item]" [ngClass]="{'winner': data[item].Bet == winner}">
+                    <mat-card-header>
+                        <div mat-card-avatar class="avatar-image"><img src="{{data[item]['Profile Image']}}" />
+                        </div>
+                        <mat-card-title>{{data[item].Name}}</mat-card-title>
+                        <mat-card-subtitle>{{data[item].Level}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{data[item].Bet}}
+                        </p>
+                        <p>
+                            {{data[item].Price}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-footer></mat-card-footer>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+</div>
